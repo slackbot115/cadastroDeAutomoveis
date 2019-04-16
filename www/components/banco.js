@@ -1,15 +1,18 @@
 $(document).on('click','#cadastro',function(){
-  var parametros = {
+  if($('#marca').val() == "" || $('#modelo').val() == "" || $('#ano').val() == "" || $('#cor').val() == "" || $('#valor').val() == ""){
+    alert("Existem campos ainda nao preenchidos, preencha-os!");
+  }
+  else{
+    var parametros = {
     "marca": $("#marca").val(),
     "modelo": $("#modelo").val(),
     "ano": $("#ano").val(),
     "cor": $("#cor").val(),
     "valor": $("#valor").val()
   }
-
-  $.ajax({
+    $.ajax({
     type:"post",
-    url:"https://mobile-slackbot115.c9users.io/conexao.php",
+    url:"https://cadastro-de-carros-slackbot115.c9users.io/conexao.php",
     data:parametros,
     success:function(data){
       $("#marca").val("");
@@ -23,4 +26,5 @@ $(document).on('click','#cadastro',function(){
       navigator.notification.alert(data);
     }
   });
+  }
 });
