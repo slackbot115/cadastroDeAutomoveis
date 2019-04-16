@@ -1,5 +1,5 @@
 $(function() {
-    $('#valor').maskMoney({prefix:'R$ ', thousands:'.', decimal:',', affixesStay: false});
+    $('#valor').maskMoney();
   })
 
 $(document).on('click','#cadastro',function(){
