@@ -1,3 +1,7 @@
+$(function() {
+    $('#valor').maskMoney({prefix:'R$ ', thousands:'.', decimal:',', affixesStay: false});
+  })
+
 $(document).on('click','#cadastro',function(){
   if($('#marca').val() == "" || $('#modelo').val() == "" || $('#ano').val() == "" || $('#cor').val() == "" || $('#valor').val() == ""){
     alert("Existem campos ainda nao preenchidos, preencha-os!");
@@ -32,5 +36,6 @@ $(document).on('click','#cadastro',function(){
 $(document).on('keyup change click focus','#cor',function(){
   $('#cadastro').css({
    "background-color": $(this).val()
+    //document.getElementById("cadastro").style.color="#cor";
    })
 });
