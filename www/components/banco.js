@@ -14,22 +14,23 @@ $(document).on('click','#cadastro',function(){
     "cor": $("#cor").val(),
     "valor": $("#valor").val()
   }
-    $.ajax({
-    type:"post",
-    url:"https://cadastro-de-carros-slackbot115.c9users.io/conexao.php",
-    data:parametros,
-    success:function(data){
-      $("#marca").val("");
-      $("#modelo").val("");
-      $("#ano").val("");
-      $("#cor").val("");
-      $("#valor").val("");
-      navigator.notification.alert(data);
-    },
-    error:function(data){
-      navigator.notification.alert(data);
-    }
-  });
+  //   $.ajax({
+  //   type:"post",
+  //   url:"https://cadastro-de-carros-slackbot115.c9users.io/conexao.php",
+  //   data:parametros,
+  //   success:function(data){
+  //     $("#marca").val("");
+  //     $("#modelo").val("");
+  //     $("#ano").val("");
+  //     $("#cor").val("");
+  //     $("#valor").val("");
+  //     navigator.notification.alert(data);
+  //   },
+  //   error:function(data){
+  //     navigator.notification.alert(data);
+  //   }
+  // });
+  console.log(parametros);
   }
 });
 
