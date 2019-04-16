@@ -28,3 +28,9 @@ $(document).on('click','#cadastro',function(){
   });
   }
 });
+
+$(document).on('keyup change click focus','#cor',function(){
+  $('#cadastro').css({
+   "background-color": $(this).val()
+   })
+});
